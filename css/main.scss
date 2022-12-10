@@ -1,0 +1,19 @@
+@use "../sass/base/reset.scss";
+@use "../sass/base/container";
+@use "../sass/base/section";
+@use "../sass/components/header.scss";
+
+@use "../sass/components/footer";
+@use "../sass/layouts/portfolio";
+@use "../sass/layouts/modal";
+
+@use "../sass/utils/variables" as v;
+
+@use "../sass/layouts/hero";
+@use "../sass/layouts/features";
+@use "../sass/layouts/team";
+@use "../sass/layouts/whatWeDo";
+@use "../sass/layouts/customers";
+@use "../sass/components/logo";
+@use "../sass/components/headers";
+@use "../sass/components/button";

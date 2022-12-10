@@ -1,0 +1,23 @@
+@use "../utils/variables" as v;
+.customer-list {
+    padding-top: 50px;
+    display: flex;
+    gap: 30px;
+    .customer-list__item {
+        padding: 16px 32px;
+        border: 1px solid map-get($map: v.$colors, $key: "icon-color");
+        border-radius: 4px;
+        display: inline-block;
+        &:hover {
+            border-color: map-get($map: v.$colors, $key: "accent");
+            svg {
+                fill: map-get($map: v.$colors, $key: "accent");
+            }
+        }
+        .customer-icon {
+            height: 60px;
+            width: 106px;
+            fill: map-get($map: v.$colors, $key: "icon-color");
+        }
+    }
+}

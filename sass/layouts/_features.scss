@@ -1,0 +1,25 @@
+@use "../utils/variables" as v;
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.feature {
+    line-height: 24px;
+    font-size: 14px;
+    width: 270px;
+    .feature__image {
+        background-color: map-get($map: v.$colors, $key: "background-grey");
+        width: auto;
+        padding: 25px 100px;
+        margin-bottom: 30px;
+    }
+    .feature__header {
+        font-weight: 700;
+        line-height: 16.41px;
+    }
+    .feature__text {
+        padding-top: 9px;
+        color: map-get($map: v.$colors, $key: "primary");
+    }
+}

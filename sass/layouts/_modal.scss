@@ -1,0 +1,142 @@
+@use "../utils/variables" as v;
+.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.backdrop {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition-duration: v.$animation-time;
+    transition-timing-function: v.$timing-function;
+}
+
+.modal {
+    position: relative;
+    width: 528px;
+    background-color: #fff;
+    z-index: 3;
+    .modal__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 30px;
+        background: none;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+            fill: map-get($map: v.$colors, $key: "accent");
+        }
+        .modal__button__icon {
+            height: 18px;
+            width: 18px;
+            margin-right: 1px;
+        }
+    }
+    .modal__text {
+        font: 700 20px/24px Roboto;
+        margin: 40px 40px 12px 40px;
+    }
+}
+.input {
+    color: #757575;
+    margin: 4px 40px 4px 0px;
+    padding: 12px;
+    padding-left: 42px;
+    background: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    &:focus {
+        background: none;
+        border: 1px solid map-get($map: v.$colors, $key: "accent");
+        color: #757575;
+        outline: none;
+        &::placeholder {
+            color: #757575;
+            opacity: 0.8;
+        }
+    }
+    + .input__icon {
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        bottom: 15px;
+        left: 12px;
+        fill: #212121;
+    }
+}
+.form__label {
+    margin-top: 10px;
+    position: relative;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    font: 400 12px/14px Roboto;
+    color: #757575;
+}
+.form {
+    .form__textarea {
+        height: 120px;
+        padding: 12px;
+        resize: none;
+    }
+    .form__submit-button {
+        margin-bottom: 40px;
+        padding: 6px 76px;
+    }
+}
+.checkbox {
+    margin: 25px 52px 10px 52px;
+    font: 400 14px/24px Roboto;
+    display: flex;
+    flex-direction: row;
+    .checkbox__margin {
+        margin-right: 8px;
+    }
+    .checkbox__appearance {
+        display: flex;
+        margin-top: 4px;
+        padding: 0;
+        width: 15px;
+        height: 15px;
+        appearance: none;
+        border: 2px solid #000000;
+        border-radius: 2px;
+    }
+    .checkbox__icon {
+        height: 15px;
+        width: 15px;
+        border-radius: 2px;
+        display: none;
+        position: absolute;
+        top: 4px;
+        left: 0;
+        background-color: map-get($map: v.$colors, $key: "accent");
+    }
+}
+.input:focus + .input__icon {
+    fill: map-get($map: v.$colors, $key: "accent");
+}
+
+input[type="checkbox"]:checked + .checkbox__icon {
+    display: inline-block;
+}
+
+.terms-and-conditions-link:hover {
+    color: map-get($map: v.$colors, $key: "accent");
+    text-decoration: underline map-get($map: v.$colors, $key: "accent");
+}

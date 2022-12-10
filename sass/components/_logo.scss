@@ -1,0 +1,6 @@
+@use "../utils/variables" as v;
+.logo {
+    color: map-get($map: v.$colors, $key: "accent");
+    font-family: "raleway";
+    font-size: 26px;
+}

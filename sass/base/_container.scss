@@ -1,5 +1,18 @@
 .container {
     padding: 0 15px;
-    width: 1200px;
+    width: 480px;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 15px;
+        width: 768px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 0 15px;
+        width: 1200px;
+    }
 }

@@ -5,3 +5,14 @@
     color: #212121;
     line-height: 42.19px;
 }
+
+@media screen and (min-width: 768px) {
+    .headers {
+        font-size: 28px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .headers {
+        font-size: 36px;
+    }
+}

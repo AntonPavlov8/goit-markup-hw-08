@@ -1,13 +1,19 @@
 @use "../utils/variables" as v;
 .features-list {
+    width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     gap: 30px;
+    flex-wrap: nowrap;
+}
+.feature-section {
+    padding: 0;
 }
 .feature {
     line-height: 24px;
     font-size: 14px;
-    width: 270px;
+    max-width: 354px;
     .feature__image {
         background-color: map-get($map: v.$colors, $key: "background-grey");
         width: auto;
@@ -21,5 +27,35 @@
     .feature__text {
         padding-top: 9px;
         color: map-get($map: v.$colors, $key: "primary");
+    }
+}
+@media screen and (min-width: 768px) {
+    .features-list {
+        flex-wrap: wrap;
+    }
+    .feature {
+        max-width: 354px;
+        .feature__image {
+            padding: 25px 137px;
+        }
+        .feature__header {
+            font-size: 14px;
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .feature-section {
+        padding: 60px 0;
+    }
+    .features-list {
+        flex-wrap: nowrap;
+    }
+    .feature {
+        .feature__image {
+            padding: 25px 100px;
+        }
+        .feature__header {
+            font-size: 16px;
+        }
     }
 }

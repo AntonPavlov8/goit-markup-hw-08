@@ -21,10 +21,18 @@
         }
     }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
     .customer-list {
         padding-top: 30px;
         flex-wrap: wrap;
+        .customer-list__item {
+            padding: 16px 52px;
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .customer-list {
+        padding-top: 30px;
         .customer-list__item {
             padding: 16px 60px;
         }

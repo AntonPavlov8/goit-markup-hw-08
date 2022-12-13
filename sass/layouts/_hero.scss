@@ -1,6 +1,5 @@
 .hero {
-    padding: 200px 0;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/herobg.png");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -8,14 +7,14 @@
     .hero__title {
         margin: auto;
         color: #ffffff;
-        font: 900 44px/60px Roboto;
     }
     .hero__button {
         margin-top: 30px;
         padding: 6px 24px;
     }
 }
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 480px) {
     .hero {
         padding: 118px 0;
         .hero__title {
@@ -23,11 +22,17 @@
         }
     }
 }
+
 @media screen and (min-width: 1200px) {
     .hero {
         padding: 200px 0;
         .hero__title {
             font: 900 44px/60px Roboto;
         }
+    }
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero2x.jpg");
     }
 }

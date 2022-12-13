@@ -1,0 +1,106 @@
+@use "../utils/variables" as v;
+.mobile-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    a:hover {
+        color: map-get($map: v.$colors, $key: "accent");
+    }
+    .mobile-header__list {
+        font: 500 40px Roboto;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .mobile-header__contacts-list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        &--email {
+            font-size: 24px;
+            color: map-get($map: v.$colors, $key: "primary");
+        }
+        &--number {
+            font-size: 34px;
+            color: map-get($map: v.$colors, $key: "accent");
+        }
+    }
+    .mobile-header__social-links {
+        margin-top: 64px;
+        display: flex;
+        gap: 20px;
+        font: 500 18px/22px Roboto;
+        color: map-get($map: v.$colors, $key: "accent");
+        li {
+            position: relative;
+            &:not(:last-child)::after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 22px;
+                background-color: #212121;
+                opacity: 0.2;
+                border-radius: 2px;
+                right: -10px;
+                top: 0;
+            }
+        }
+    }
+}
+
+.menu-toggle {
+    padding: 32px 0px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    svg {
+        height: 40px;
+        width: 40px;
+    }
+    &:hover {
+        fill: map-get($map: v.$colors, $key: "accent");
+    }
+}
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: #fff;
+    z-index: 999;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #000;
+}

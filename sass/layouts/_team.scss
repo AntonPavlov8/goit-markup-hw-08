@@ -3,9 +3,6 @@
     background-color: map-get($map: v.$colors, $key: "background-grey");
     padding: 94px 0;
     text-align: center;
-    img {
-        width: 270px;
-    }
 }
 
 .team-list {
@@ -58,15 +55,26 @@
         }
     }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
     .team-section {
         padding: 60px 0px;
+        img {
+            width: 450px;
+        }
+    }
+    .team-list {
+        padding-top: 30px;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 768px) {
+    .team-section {
         img {
             width: 354px;
         }
     }
     .team-list {
-        padding-top: 30px;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: stretch;
     }

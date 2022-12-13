@@ -54,10 +54,6 @@
     }
 }
 
-.left-padding-container {
-    margin-left: 70px;
-}
-
 .footer-icons-list {
     div {
         height: 44px;
@@ -91,7 +87,7 @@
         }
     }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
     .footer-container {
         text-align: center;
         flex-wrap: wrap;
@@ -109,11 +105,12 @@
         margin-left: 0;
     }
 }
+
 @media screen and (min-width: 1200px) {
     .footer-container {
         text-align: left;
         flex-wrap: no-wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
         gap: 20px;
     }
     .footer__form {

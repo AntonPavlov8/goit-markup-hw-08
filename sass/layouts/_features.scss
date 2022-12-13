@@ -2,7 +2,6 @@
 .features-list {
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     gap: 30px;
     flex-wrap: nowrap;
@@ -29,23 +28,43 @@
         color: map-get($map: v.$colors, $key: "primary");
     }
 }
+@media screen and (min-width: 480px) {
+    .feature-section {
+        padding: 60px 0;
+    }
+    .features-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature {
+        max-width: 450px;
+        .feature__image {
+            padding: 25px 190px;
+        }
+        .feature__header {
+            font-size: 14px;
+        }
+        .feature__header {
+            text-align: center;
+        }
+    }
+}
 @media screen and (min-width: 768px) {
     .features-list {
+        flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
     }
     .feature {
         max-width: 354px;
         .feature__image {
             padding: 25px 137px;
         }
-        .feature__header {
-            font-size: 14px;
-        }
     }
 }
 @media screen and (min-width: 1200px) {
     .feature-section {
-        padding: 60px 0;
+        padding: 94px 0;
     }
     .features-list {
         flex-wrap: nowrap;

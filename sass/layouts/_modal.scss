@@ -141,12 +141,13 @@ input[type="checkbox"]:checked + .checkbox__icon {
     color: map-get($map: v.$colors, $key: "accent");
     text-decoration: underline map-get($map: v.$colors, $key: "accent");
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
     .modal {
         position: relative;
         width: 450px;
     }
 }
+
 @media screen and (min-width: 1200px) {
     .modal {
         position: relative;

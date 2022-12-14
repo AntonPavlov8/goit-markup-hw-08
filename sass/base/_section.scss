@@ -4,7 +4,7 @@
 .section-no-top-padding {
     padding-top: 0;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1200px) {
     .section {
         padding: 60px 0;
     }

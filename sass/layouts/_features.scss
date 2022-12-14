@@ -28,7 +28,8 @@
         color: map-get($map: v.$colors, $key: "primary");
     }
 }
-@media screen and (min-width: 480px) {
+
+@media screen and (max-width: 768px) {
     .feature-section {
         padding: 60px 0;
     }
@@ -39,16 +40,15 @@
     .feature {
         max-width: 450px;
         .feature__image {
-            padding: 25px 190px;
+            padding: 25px calc(50% - 35px);
         }
         .feature__header {
             font-size: 14px;
-        }
-        .feature__header {
             text-align: center;
         }
     }
 }
+
 @media screen and (min-width: 768px) {
     .features-list {
         flex-direction: row;

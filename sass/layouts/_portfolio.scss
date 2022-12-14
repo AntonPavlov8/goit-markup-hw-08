@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .filter-button {
@@ -45,6 +46,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     flex-wrap: wrap;
 }
@@ -95,4 +97,15 @@
     padding: 24px;
     overflow: auto;
     opacity: 0.9;
+}
+@media screen and (max-width: 1199px) {
+    .card {
+        .card__name {
+            letter-spacing: 0.06em;
+            font: 700 16px/30px Roboto;
+        }
+        img {
+            width: 340px;
+        }
+    }
 }

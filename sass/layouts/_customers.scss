@@ -2,6 +2,8 @@
 .customer-list {
     padding-top: 50px;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
     .customer-list__item {
         padding: 16px 32px;
@@ -21,13 +23,18 @@
         }
     }
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
     .customer-list {
         padding-top: 30px;
-        flex-wrap: wrap;
+
         .customer-list__item {
-            padding: 16px 52px;
+            padding: 16px 24px;
         }
+    }
+}
+@media screen and (min-width: 480px) {
+    .customer-list__item {
+        padding: 16px 52px;
     }
 }
 @media screen and (min-width: 768px) {

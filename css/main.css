@@ -76,7 +76,7 @@ body {
   padding-top: 0;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1200px) {
   .section {
     padding: 60px 0;
   }
@@ -399,7 +399,7 @@ body {
   opacity: 0.8;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .footer-container {
     text-align: center;
     flex-wrap: wrap;
@@ -411,7 +411,7 @@ body {
     gap: 20px;
   }
   .footer-email-input {
-    width: 450px;
+    max-width: 450px;
   }
   .left-padding-container {
     margin-left: 0;
@@ -436,6 +436,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .filter-button {
@@ -479,6 +480,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 30px;
   flex-wrap: wrap;
 }
@@ -531,6 +533,15 @@ body {
   opacity: 0.9;
 }
 
+@media screen and (max-width: 1199px) {
+  .card .card__name {
+    letter-spacing: 0.06em;
+    font: 700 16px/30px Roboto;
+  }
+  .card img {
+    width: 340px;
+  }
+}
 .is-hidden {
   pointer-events: none;
   opacity: 0;
@@ -716,7 +727,7 @@ input[type=checkbox]:checked + .checkbox__icon {
   padding: 6px 24px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1200px) {
   .hero {
     padding: 118px 0;
   }
@@ -769,7 +780,7 @@ input[type=checkbox]:checked + .checkbox__icon {
   color: #757575;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 768px) {
   .feature-section {
     padding: 60px 0;
   }
@@ -781,12 +792,10 @@ input[type=checkbox]:checked + .checkbox__icon {
     max-width: 450px;
   }
   .feature .feature__image {
-    padding: 25px 190px;
+    padding: 25px calc(50% - 35px);
   }
   .feature .feature__header {
     font-size: 14px;
-  }
-  .feature .feature__header {
     text-align: center;
   }
 }
@@ -875,7 +884,7 @@ input[type=checkbox]:checked + .checkbox__icon {
   fill: #fff;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 768px) {
   .team-section {
     padding: 60px 0px;
   }
@@ -944,6 +953,8 @@ input[type=checkbox]:checked + .checkbox__icon {
 .customer-list {
   padding-top: 50px;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .customer-list .customer-list__item {
@@ -964,12 +975,16 @@ input[type=checkbox]:checked + .checkbox__icon {
   fill: #afb1b8;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .customer-list {
     padding-top: 30px;
-    flex-wrap: wrap;
   }
   .customer-list .customer-list__item {
+    padding: 16px 24px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .customer-list__item {
     padding: 16px 52px;
   }
 }

@@ -99,6 +99,9 @@
     opacity: 0.9;
 }
 @media screen and (max-width: 1199px) {
+    .cards-list {
+        justify-content: left;
+    }
     .card {
         .card__name {
             letter-spacing: 0.06em;

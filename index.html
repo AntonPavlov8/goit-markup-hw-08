@@ -18,7 +18,16 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-container">
+      <div class="header__container">
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg>
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <div class="container header__content">
           <nav class="header__nav">
             <a href="index.html" class="logo link">WebStudio</a>
@@ -56,15 +65,6 @@
           </ul>
         </div>
       </div>
-      <button
-        class="menu-toggle js-open-menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
-        <svg>
-          <use href="./images/icons.svg#icon-burger"></use>
-        </svg>
-      </button>
     </header>
     <main>
       <section class="hero">

@@ -98,9 +98,24 @@
     overflow: auto;
     opacity: 0.9;
 }
-@media screen and (max-width: 1199px) {
+
+@media screen, (min-width: 768px) and (max-width: 1199px) {
     .cards-list {
         justify-content: left;
+    }
+    .card {
+        .card__name {
+            letter-spacing: 0.06em;
+            font: 700 16px/30px Roboto;
+        }
+        img {
+            width: 340px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .cards-list {
+        justify-content: center;
     }
     .card {
         .card__name {

@@ -96,7 +96,7 @@ body {
   margin: auto;
   border-bottom: 1px solid #ececec;
 }
-.header .header__conteiner {
+.header .header__container {
   position: relative;
 }
 .header .header__content {
@@ -171,6 +171,10 @@ body {
   .header .header__nav .header__ul,
 .header .header__contacts {
     display: none;
+  }
+  .header__container {
+    max-width: 480px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -253,12 +257,11 @@ body {
 }
 
 .menu-toggle {
-  padding: 32px 0px;
   position: absolute;
-  top: 10px;
+  padding: 10px 0px;
+  top: 0;
   right: 15px;
   margin: 0;
-  padding: 0;
   background-color: transparent;
   cursor: pointer;
   border: none;
@@ -420,7 +423,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-container {
     text-align: left;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     gap: 20px;
   }
@@ -533,9 +536,21 @@ body {
   opacity: 0.9;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen, (min-width: 768px) and (max-width: 1199px) {
   .cards-list {
     justify-content: left;
+  }
+  .card .card__name {
+    letter-spacing: 0.06em;
+    font: 700 16px/30px Roboto;
+  }
+  .card img {
+    width: 340px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cards-list {
+    justify-content: center;
   }
   .card .card__name {
     letter-spacing: 0.06em;
@@ -921,7 +936,7 @@ input[type=checkbox]:checked + .checkbox__icon {
   }
   .team-list {
     padding-top: 50px;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
   }
 }
@@ -1005,7 +1020,7 @@ input[type=checkbox]:checked + .checkbox__icon {
 @media screen and (min-width: 1200px) {
   .customer-list {
     padding-top: 50px;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
   }
   .customer-list .customer-list__item {
     padding: 16px 32px;

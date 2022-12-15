@@ -2,7 +2,7 @@
 .header {
     margin: auto;
     border-bottom: 1px solid #ececec;
-    .header__conteiner {
+    .header__container {
         position: relative;
     }
     .header__content {
@@ -77,6 +77,10 @@
     .header .header__nav .header__ul,
     .header .header__contacts {
         display: none;
+    }
+    .header__container {
+        max-width: 480px;
+        margin: 0 auto;
     }
 }
 @media screen and (min-width: 768px) {
